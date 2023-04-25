@@ -2,8 +2,14 @@
 # Rapport
 
 **Skriv din rapport här!**
+En second activity lades till.  I denna activity så lades data till och i första activity så lades en knapp till som leder till andra activity.
+Datan som lades till var namn och skonummer. 
 
-_Du kan ta bort all text som finns sedan tidigare_.
+``` Bundle extras = getIntent().getExtras();
+
+        TextView newView =findViewById(R.id.textViewName);
+ ```
+Följande kod ser till att extras som skickades in i intent och tilldelar det till extras-variabeln.  textViewName lokaliseras för att sen tilldela det till newView.
 
 ## Följande grundsyn gäller dugga-svar:
 
@@ -33,8 +39,7 @@ function errorCallback(error) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](android.png)
-
+![](Youssuf.png)
 Läs gärna:
 
 - Boulos, M.N.K., Warren, J., Gong, J. & Yue, P. (2010) Web GIS in practice VIII: HTML5 and the canvas element for interactive online mapping. International journal of health geographics 9, 14. Shin, Y. &
