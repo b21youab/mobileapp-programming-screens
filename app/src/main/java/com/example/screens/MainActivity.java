@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,19 +20,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ViewActivity.class);
-                intent.putExtra("name", "Youssuf"); // Optional
-                intent.putExtra("number", 43); // Optional
-                startActivity(intent);
 
+                EditText nameEdit = findViewById(R.id.editTextName);
+                String name = nameEdit.getText().toString();
+
+                intent.putExtra("name", name);
+                startActivity(intent);
             }
         });
-
-
-
-
     }
-
-
 }
-
-

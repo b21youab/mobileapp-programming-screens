@@ -2,14 +2,27 @@
 # Rapport
 
 **Skriv din rapport här!**
-En second activity lades till.  I denna activity så lades data till och i första activity så lades en knapp till som leder till andra activity.
-Datan som lades till var namn och skonummer. 
+Två activites lades till, en main och en view, samt tre widgets.
+Ena widgeten Textview välkomnar användaren, den andra widgeten EditText tillåter användaren manipulera namnfältet, 
+i MainActivity, till att presentera användarens namn som sedan skickas över till viewActivity. 
+Slutligen lades en Button även till. 
+MainActivity inehåller en intent som pekar mot ViewActivity.
+I ViewActivity lades en textview till för att presentera datan från den föregående MainActivity, detta möjliggjordes via en intent.
+En intent är ett objekt som möjliggör överföring av data mellan olika activities. 
+Att återvända till MainActivity har gjorts enkelt då en klickbar pil förenklar processen.
+Den här koden hämtar data från en intents extra bundle. Intenten skickas mellan activities och koden tittar också om det finns extras ihopsatta med intents.
 
-``` Bundle extras = getIntent().getExtras();
+```  Bundle extras = getIntent().getExtras();
 
         TextView newView =findViewById(R.id.textViewName);
+        if (extras != null) {
+
+            String name = extras.getString("name");
+           // editTextName.setText(String.valueOf(newView));
+
+            newView.setText(name);
+
  ```
-Följande kod ser till att extras som skickades in i intent och tilldelar det till extras-variabeln.  textViewName lokaliseras för att sen tilldela det till newView.
 
 ## Följande grundsyn gäller dugga-svar:
 
@@ -39,7 +52,8 @@ function errorCallback(error) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](Youssuf.png)
+![](youssufscreen.png)
+![](youssufscreentaken.png)
 Läs gärna:
 
 - Boulos, M.N.K., Warren, J., Gong, J. & Yue, P. (2010) Web GIS in practice VIII: HTML5 and the canvas element for interactive online mapping. International journal of health geographics 9, 14. Shin, Y. &
